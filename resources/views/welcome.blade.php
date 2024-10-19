@@ -10,11 +10,7 @@
         @livewireStyles
     </head>
     <body>
-        <livewire:counter />
-
-        @foreach ($colors as $color)
-            <livewire:color :color="$color" :key="$color->id" />
-        @endforeach
+        <livewire:game />
 
         @livewireScripts
     </body>
