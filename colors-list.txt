@@ -100,7 +100,9 @@ olivedrab
 orange
 orangered
 orchid
-palegoldenrod palegreen paleturquoise
+palegoldenrod
+palegreen
+paleturquoise
 palevioletred
 papayawhip
 peachpuff
@@ -130,7 +132,8 @@ tan
 teal
 thistle
 tomato
-turquoise violet
+turquoise
+violet
 wheat
 white
 whitesmoke

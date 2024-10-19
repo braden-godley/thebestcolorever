@@ -24,9 +24,9 @@ class ColorSeeder extends Seeder
             }
         }
 
-        foreach ($colors as $hex) {
+        foreach ($colors as $colorname) {
             $color = new Color();
-            $color->hex = $hex;
+            $color->color = $colorname;
             $color->save();
         }
     }

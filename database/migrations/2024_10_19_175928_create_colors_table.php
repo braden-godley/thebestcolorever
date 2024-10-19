@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('colors', function (Blueprint $table) {
             $table->id();
-            $table->string('hex', 6);
+            $table->string('color');
             $table->integer('votes')->default(0);
         });
     }
