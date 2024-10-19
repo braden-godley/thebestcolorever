@@ -12,15 +12,17 @@ class ColorSeeder extends Seeder
      */
     public function run(): void
     {
-        $colors = [
-            "#FF0000",
-            "#00FF00",
-            "#0000FF",
-            "#FFFF00",
-            "#FF00FF",
-            "#00FFFF",
-            "#000000",
-        ];
+        $fh = fopen(__DIR__ . "/../../colors-list.txt", "r");
+
+        $colors = [];
+
+        while (!feof($fh)) {
+            $line = fgets($fh);
+            $line = trim($line);
+            if ($line) {
+                $colors[] = $line;
+            }
+        }
 
         foreach ($colors as $hex) {
             $color = new Color();
