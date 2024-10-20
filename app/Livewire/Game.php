@@ -18,7 +18,6 @@ class Game extends Component
         $this->color1 = $colors->first();
         $this->color2 = $colors->last();
         $this->alreadyVoted = false;
-        Log::info("Colors: " . $this->color1 . " and " . $this->color2);
     }
 
     public function vote(int $which) {
@@ -43,9 +42,9 @@ class Game extends Component
         $vote->worse_color_id = $worseColor->id;
         $vote->save();
 
-        Log::info("Voted", [ 'better' => $betterColor->color, 'worse' => $worseColor->color, 'ip' => $vote->ip]);
-
         $this->rerollColors();
+
+        Log::info("Voted", [ 'better' => $betterColor->color, 'worse' => $worseColor->color, 'ip' => $vote->ip]);
     }
 
     public function mount() {
@@ -58,3 +57,4 @@ class Game extends Component
         return view('livewire.game');
     }
 }
+
