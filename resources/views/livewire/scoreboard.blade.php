@@ -19,7 +19,7 @@
                         <div class="w-24 h-24" style="background-color: {{ $color->color }}; box-shadow: 1px 1px rgba(0,0,0,.1)"></div>
                     </td>
                     <td>{{ $color->color }}</td>
-                    <td>{{ $color->votes }}</td>
+                    <td>{{ $color->better_votes_count }}</td>
                 </tr>
             @endforeach
             </tbody>

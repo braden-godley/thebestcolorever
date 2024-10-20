@@ -11,7 +11,7 @@ class Scoreboard extends Component
 
     public function refresh()
     {
-        $this->colors = Color::orderBy('votes', 'DESC')->get();
+        $this->colors = Color::withCount('betterVotes')->orderBy('better_votes_count', 'desc')->get();
     }
 
     public function mount()

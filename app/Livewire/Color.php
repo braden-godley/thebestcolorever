@@ -13,7 +13,6 @@ class Color extends Component
 
     public function render()
     {
-        Log::info("Rendering color: " . $this->color);
         return view('livewire.color');
     }
 }

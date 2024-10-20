@@ -12,4 +12,14 @@ class Color extends Model
     {
         return self::inRandomOrder()->take($count)->get();
     }
+
+    public function betterVotes()
+    {
+        return $this->hasMany(Vote::class, 'better_color_id');
+    }
+
+    public function worseVotes()
+    {
+        return $this->hasMany(Vote::class, 'worse_color_id');
+    }
 }
