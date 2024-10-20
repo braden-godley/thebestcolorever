@@ -4,7 +4,7 @@
         <p class="mb-20">Which color is better?</p>
         <livewire:game />
         <div class="mt-20">
-            <a href="/scoreboard">View scoreboard</a>
+            <a class="underline" href="/scoreboard">View scoreboard</a>
         </div>
     </div>
 </x-layout>
