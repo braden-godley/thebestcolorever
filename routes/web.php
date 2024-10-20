@@ -2,10 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('game');
-});
+Route::get('/', \App\Livewire\Game::class);
 
-Route::get('/scoreboard', function () {
-    return view('scoreboard');
-});
+Route::get('/scoreboard', \App\Livewire\Scoreboard::class);
